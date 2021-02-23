@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row"></div>
+        <br>
+        <div class="row">
+            <div class="col-md-2 col-xs-2 col-sm-2"></div>
+            <div class="col-md-10 col-xs-10 col-sm-10">
+                <h3 class="round3" style="text-align: center; color: #0000ff;"><span class="glyphicon glyphicon-user"></span> Detalhes do Contacto</h3>
+                <div class="card">
+                    <div class="card-body">
+                        <p><b class="text-info"><span></span> Nome Completo:</b> {{ contact.firstName }} {{ contact.lastName }}</p>
+                        <p><b class="text-info">Email:</b> {{ contact.email }}</p>
+                        <p><b class="text-info">Telefone:</b> {{ contact.phone }}</p>
+                        <p><b class="text-info">Endereço:</b> {{ contact.address }}</p>
+                        <p><b class="text-info">Descrição:</b> {{ contact.description }}</p>
+                    </div>
+                    
+                </div>
+                <br>
+                <a href="{% url 'index' %}">
+                    <button class="btn btn-outline-info">
+                       <span class="glyphicon glyphicon-home"></span> Página Principal
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    

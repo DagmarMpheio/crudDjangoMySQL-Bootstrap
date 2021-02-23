@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row"></div>
+        <br>
+        <div class="row">
+            <div class="col-md-2 col-xs-2 col-sm-2"></div>
+            <div class="col-md-10 col-xs-10 col-sm-10">
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="alert alert-warnig">
+                            Tem a certeza que deseja excluir <b style="color: #ff0000;">{{ object.firstName }} {{ object.lastName }}</b> ?
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-danger">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+    
